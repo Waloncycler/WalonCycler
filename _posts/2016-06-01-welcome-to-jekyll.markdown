@@ -2,7 +2,7 @@
 layout: post
 title:  "杂物间"
 color:  blue
-width:   4
+width:   3
 height:  1
 date:   2020-11-13 11:31:49 +0200
 categories: OTHERS
