@@ -1,18 +1,14 @@
 -   id: java
     descr: java    
     xp: 6
--   id: css
-    descr: css
-    color: teal
-    xp: 7
 -   id: python
     descr: python    
     xp: 3
 -   id: angular
     descr: angularjs    
     xp: 8
--   id: pho&mysql
-    descr: pho&mysql    
+-   id: phP&mysql
+    descr: phP&mysql    
     xp: 5
 -   id: 计算机网络
     descr: 计算机网络    
