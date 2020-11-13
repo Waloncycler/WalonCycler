@@ -2,7 +2,7 @@
 layout: post
 title:  "JAVA学习库"
 color:  teal
-width:   6 
+width:   20 
 height:  1
 date:   2020-11-13 11:31:49 +0200
 categories: java
