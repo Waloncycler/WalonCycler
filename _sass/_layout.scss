@@ -44,7 +44,7 @@
 
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
-            margin-right: 20px;
+            margin-right: 10px;
         }
     }
 
@@ -170,17 +170,17 @@
     width:         calc(66.66666667% - (#{$spacing-unit} / 2));
 }
 
-.col-9 {
-    width: -webkit-calc(75% - (#{$spacing-unit} / 2));
-    width:         calc(75% - (#{$spacing-unit} / 2));
-}
-
 .col-10 {
     width: -webkit-calc(83.33333333% - (#{$spacing-unit} / 2));
     width:         calc(83.33333333% - (#{$spacing-unit} / 2));
 }
 
 .col-11 {
+    width: -webkit-calc(91.66666667% - (#{$spacing-unit} / 2));
+    width:         calc(91.66666667% - (#{$spacing-unit} / 2));
+}
+
+.col-12 {
     width: -webkit-calc(91.66666667% - (#{$spacing-unit} / 2));
     width:         calc(91.66666667% - (#{$spacing-unit} / 2));
 }
@@ -193,9 +193,9 @@
     .col-6,
     .col-7,
     .col-8,
-    .col-9,
     .col-10,
-    .col-11{
+    .col-11,
+    .col-12{
         width: -webkit-calc(100% - (#{$spacing-unit} / 2));
         width:         calc(100% - (#{$spacing-unit} / 2));
     }
