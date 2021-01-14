@@ -1,21 +1,35 @@
-# Walon自行车
-Beautiful responsive portfolio style template for designers and web developers
+# Waloncycler
+[力扣主页](https://leetcode-cn.com/u/waloncycler/)
+[牛客网主页](https://www.nowcoder.com/profile/941880589?noredirect=true)
+[博客主页]()
 
-[![Gitter](https://badges.gitter.im/nikrich/jekyll-slender-template.svg)](https://gitter.im/nikrich/jekyll-slender-template?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![Twitter](https://img.shields.io/badge/Twitter-@slender_rich-blue.svg?style=flat)](https://twitter.com/slender_rich)
-
-![preview](http://i.imgur.com/9Nz6Ib9.jpg)
-
-## Demo
-Find a demo [here](http://nikrich.github.io/jekyll-slender-template/#)
-
-## Contributing
-
-1. Clone the repo
-2. Checkout the dev branch ( Do not work directly on master )
-3. Use ```jekyll serve``` to run the project
-4. Make your changes and test
-5. Submit a pull request
+## 算法题
+[刷题之旅]()
 
 
-Inspired by [Balraj Chana](https://dribbble.com/shots/2380700-New-Portfolio-Site-Live)
+## 计算机基础知识
+
+- [计算机网络]
+- [操作系统] 
+- [计算机组成原理]
+
+## 数据结构与算法
+
+## 设计模式
+
+## Python学习
+
+## 我的项目
+
+## 快捷指南
+[操作文件]
+
+
+
+
+
+
+
+
+
+Powered By [**Git**](https://git-scm.com/) | Theme Sponsor: [**Balraj Chana**](https://dribbble.com/shots/-New-Portfolio-Site-Live)
