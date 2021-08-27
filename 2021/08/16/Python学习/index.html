@@ -1,0 +1,182 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
+  <title>Python学习 [ 晰瓜 ]</title>
+  <!-- bootstrapcss文件 -->
+ <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<!--   
+<link rel="stylesheet" href="/css/zhl.css">
+
+ -->
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/fork-awesome.min.css">
+    
+      <link rel="stylesheet" href="/css/zhl.css">
+    
+  
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+  <div id="wrap" class="col-md-12">
+    <div id="header">
+	<div id="header-left">
+	<h1 id="header-title"> 
+	<a href="/">
+		晰瓜
+	</a>
+	</h1>
+	
+	</div>
+	<div id="header-right">
+		
+		
+		<a href="/"  title="home"><i class="fa fa-home ">home</i></a>
+		
+		<a target="_blank" rel="noopener" href="https://github.com/lizehongss/demo_show"  title="demo"><i class="fa fa-code ">demo</i></a>
+		
+		<a href="/about"  title="about"><i class="fa fa-user ">about</i></a>
+		
+		<a href="/"  title="music"><i class="fa fa-music ">music</i></a>
+		
+		
+	</div>
+</div>
+
+  </div>
+  </div>
+  <div id="content" class="row">
+    <div id="content-left" class="col-md-4">
+      
+
+	
+
+	
+	<div class="widget-wrap">
+		<h3 class="widget-title fa fa-tags">标签</h3>
+		<div class="widget tags">
+		<a class="tag-span-link" href="/tags/Markdown/" rel="tag">Markdown<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/SpringMVC/" rel="tag">SpringMVC<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/java/" rel="tag">java<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/python/" rel="tag">python<span class="tag-span-count">3</span></a> <a class="tag-span-link" href="/tags/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/" rel="tag">我的项目<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法<span class="tag-span-count">5</span></a> <a class="tag-span-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" rel="tag">数据结构和算法<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E7%AC%94%E8%AF%95/" rel="tag">笔试<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" rel="tag">计算机基础<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" rel="tag">踩坑记录<span class="tag-span-count">1</span></a>
+		</div>
+	</div>
+
+
+	
+	<div class="widget-wrap">
+		<h3 class="widget-title fa fa-archive">归档</h3>
+		<div class="widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">21</span></li></ul>
+		</div>
+	</div>
+
+
+
+    </div>
+    <div id="content-right" class="col-md-8">
+    
+<article id="post">
+	<div class="post-title">
+  <h1>Python学习</h1>
+  	</div>
+  <div class="page-meta">
+  	<span class="fa-wrap">
+  		<i class="fa fa-clock-o"></i>
+  		<span class="date-meta">2021-08-16</span>
+  	</span>
+  	<span class="fa-wrap">
+  		
+  		<i class="fa fa-tags"></i>
+  		<span class="tags-meta">python</span>
+  		
+  	</span>
+  	<span class="fa-wrap">
+  		
+  	</span>
+  </div>
+  <div class="post-content">
+  <h2 id="Reduce函数："><a href="#Reduce函数：" class="headerlink" title="Reduce函数："></a>Reduce函数：</h2><ul>
+<li><strong>定义:</strong> <code>reduce(function, sequence[, initial]) -&gt; value</code></li>
+</ul>
+<p>function参数是一个有两个参数的函数，reduce依次从sequence中取一个元素，和上一次调用function的结果做参数再次调用function。第一次调用function时，如果提供initial参数，会以sequence中的第一个元素和initial作为参数调用function</p>
+<ul>
+<li><strong>示例</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">reduce(<span class="keyword">lambda</span> x, y:x+y, <span class="built_in">range</span>(<span class="number">1</span>, n+<span class="number">1</span>)) --&gt; n*(n+<span class="number">1</span>)/<span class="number">2</span></span><br><span class="line">reduce(<span class="keyword">lambda</span> x, y:x*y, nums) --&gt; ((((nums[<span class="number">0</span>]*nums[<span class="number">1</span>])*nums[<span class="number">2</span>])...)*nums[-<span class="number">1</span>])</span><br><span class="line">reduce(<span class="keyword">lambda</span> x, y:x^y, [<span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>], <span class="number">1</span>) --&gt; ((((<span class="number">1</span>^<span class="number">2</span>)^<span class="number">3</span>)^<span class="number">4</span>)^<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Map函数："><a href="#Map函数：" class="headerlink" title="Map函数："></a>Map函数：</h2><ul>
+<li><strong>定义：</strong> <code> map(function, iterable, ...)</code></li>
+</ul>
+<p>第一个参数接受一个函数名，后面的参数接受一个或多个可迭代的序列，返回的是一个集合。</p>
+<ul>
+<li><strong>示例</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 读取输入数据:</span></span><br><span class="line"><span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>.split(<span class="string">&#x27;,&#x27;</span>))</span><br><span class="line"><span class="built_in">map</span>(square, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]) --&gt; [<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>]</span><br><span class="line"><span class="built_in">map</span>(<span class="keyword">lambda</span> x, y:x+y, [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>], [<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>]) --&gt; [<span class="number">3</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>, <span class="number">19</span>]</span><br><span class="line"><span class="built_in">map</span>(<span class="keyword">lambda</span> x, y:(x*y, x+y), [<span class="number">1</span>, <span class="number">3</span>], [<span class="number">2</span>, <span class="number">4</span>]) --&gt; [(<span class="number">2</span>, <span class="number">3</span>), (<span class="number">12</span>, <span class="number">7</span>)]</span><br><span class="line"><span class="comment"># 当不定义function时，map()就等同于zip(),将多个列表相同位置的元素归并到一个元组:</span></span><br><span class="line"><span class="built_in">map</span>(<span class="literal">None</span>, [<span class="number">1</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>]) --&gt; [(<span class="number">1</span>, <span class="number">3</span>),(<span class="number">2</span>, <span class="number">4</span>)]</span><br><span class="line"><span class="comment"># 数据转换</span></span><br><span class="line"><span class="comment"># 转换成list</span></span><br><span class="line"><span class="built_in">map</span>(<span class="built_in">int</span>, (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)) --&gt; [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="built_in">map</span>(<span class="built_in">int</span>, <span class="string">&#x27;1234&#x27;</span>) --&gt; [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="comment"># 提取字典中的 KEY</span></span><br><span class="line"><span class="built_in">map</span>(<span class="built_in">int</span>, &#123;<span class="string">&#x27;A&#x27;</span>:<span class="number">1</span>, <span class="string">&#x27;B&#x27;</span>:<span class="number">2</span>, <span class="string">&#x27;C&#x27;</span>:<span class="number">3</span>&#125;) --&gt; [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+
+<h2 id="两个函数的区别：map为并行操作，reduce做简化和归类"><a href="#两个函数的区别：map为并行操作，reduce做简化和归类" class="headerlink" title="两个函数的区别：map为并行操作，reduce做简化和归类"></a>两个函数的区别：map为并行操作，reduce做简化和归类</h2><ul>
+<li><p>map和reduce函数均是接受两个参数，第一个参数均是一个函数，可为匿名函数（lambda）或普通函数，第二个参数是一个可迭代的序列（列表或元组）；</p>
+</li>
+<li><p>reduce()是将传人的函数作用在序列的第一个元素得到结果后，再将结果与下一个元素作用（累积计算）；</p>
+</li>
+<li><p>map()是将传入的函数依次作用到序列的每个元素，每个元素都是独自被函数“作用”一次 ；</p>
+</li>
+<li><p>map操作是并行操作，reduce函数是把多个参数合并的操作，也就是从多个条件简化的结果；</p>
+</li>
+<li><p>map函数的第一个参数是函数，函数的参数可以是1个或者多个，而reduce只能接受2个参数。</p>
+</li>
+</ul>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><h5 id="在google大规模集群里，就是利用这个思想，把前面并行处理的操作叫做map，并行处理之后的结果，就需要简化，归类，把这个简化和归类的过程就叫做reduce。由于reduce只能在一台主机上操作，并不能分布式地处理，但是reduce处理的是map结果，那么意味着这些结果已经非常简单，数据量大大减小，处理起来就非常快。因此可以把map，reduce过程叫做分析归纳的过程。"><a href="#在google大规模集群里，就是利用这个思想，把前面并行处理的操作叫做map，并行处理之后的结果，就需要简化，归类，把这个简化和归类的过程就叫做reduce。由于reduce只能在一台主机上操作，并不能分布式地处理，但是reduce处理的是map结果，那么意味着这些结果已经非常简单，数据量大大减小，处理起来就非常快。因此可以把map，reduce过程叫做分析归纳的过程。" class="headerlink" title="在google大规模集群里，就是利用这个思想，把前面并行处理的操作叫做map，并行处理之后的结果，就需要简化，归类，把这个简化和归类的过程就叫做reduce。由于reduce只能在一台主机上操作，并不能分布式地处理，但是reduce处理的是map结果，那么意味着这些结果已经非常简单，数据量大大减小，处理起来就非常快。因此可以把map，reduce过程叫做分析归纳的过程。"></a>在google大规模集群里，就是利用这个思想，把前面并行处理的操作叫做map，并行处理之后的结果，就需要简化，归类，把这个简化和归类的过程就叫做reduce。由于reduce只能在一台主机上操作，并不能分布式地处理，但是reduce处理的是map结果，那么意味着这些结果已经非常简单，数据量大大减小，处理起来就非常快。因此可以把map，reduce过程叫做分析归纳的过程。</h5>
+	</div>
+</article>
+
+
+
+    </div>
+  </div>
+  <div class="row">
+<div id="bottom" class="col-md-12"> 
+  <div class="bottom-nav">
+	
+	
+	<a href="https://github.com/lizehongss" class="fa fa-github fa-2x" target="_blank" title="Follow me" ></a>
+	
+	
+</div>
+<div class="bottom-info">
+	&copy; 2021 Wlaon Cycler<br>
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	theme <a href="https://github.com/lizehongss/hexo-theme-zhl" target="_blank">zhl</a>
+</div>
+</div>
+</div>
+</div>
+<div id="tool">
+  <ul>
+    <li class="fa fa-angle-up top" id="top"></li>
+  </ul>
+</div>
+  <div class="bg_content">
+    <canvas id="canvas"></canvas>
+  </div>
+  
+  <!-- scripts list from theme config.yml -->
+  
+    <script src="/js/zhl.js"></script>
+  
+    <script src="/js/bj.js"></script>
+  
+
+<!-- jQ cdn  -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<!-- bootstrap js cdn-->
+<!-- <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+
+</body>
+</html>

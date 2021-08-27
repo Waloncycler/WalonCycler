@@ -1,0 +1,212 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
+  <title>SpringMVC常用注解 [ 晰瓜 ]</title>
+  <!-- bootstrapcss文件 -->
+ <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<!--   
+<link rel="stylesheet" href="/css/zhl.css">
+
+ -->
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/fork-awesome.min.css">
+    
+      <link rel="stylesheet" href="/css/zhl.css">
+    
+  
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+  <div id="wrap" class="col-md-12">
+    <div id="header">
+	<div id="header-left">
+	<h1 id="header-title"> 
+	<a href="/">
+		晰瓜
+	</a>
+	</h1>
+	
+	</div>
+	<div id="header-right">
+		
+		
+		<a href="/"  title="home"><i class="fa fa-home ">home</i></a>
+		
+		<a target="_blank" rel="noopener" href="https://github.com/lizehongss/demo_show"  title="demo"><i class="fa fa-code ">demo</i></a>
+		
+		<a href="/about"  title="about"><i class="fa fa-user ">about</i></a>
+		
+		<a href="/"  title="music"><i class="fa fa-music ">music</i></a>
+		
+		
+	</div>
+</div>
+
+  </div>
+  </div>
+  <div id="content" class="row">
+    <div id="content-left" class="col-md-4">
+      
+
+	
+
+	
+	<div class="widget-wrap">
+		<h3 class="widget-title fa fa-tags">标签</h3>
+		<div class="widget tags">
+		<a class="tag-span-link" href="/tags/Markdown/" rel="tag">Markdown<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/SpringMVC/" rel="tag">SpringMVC<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/java/" rel="tag">java<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/python/" rel="tag">python<span class="tag-span-count">3</span></a> <a class="tag-span-link" href="/tags/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/" rel="tag">我的项目<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法<span class="tag-span-count">5</span></a> <a class="tag-span-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" rel="tag">数据结构和算法<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E7%AC%94%E8%AF%95/" rel="tag">笔试<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" rel="tag">计算机基础<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" rel="tag">踩坑记录<span class="tag-span-count">1</span></a>
+		</div>
+	</div>
+
+
+	
+	<div class="widget-wrap">
+		<h3 class="widget-title fa fa-archive">归档</h3>
+		<div class="widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">21</span></li></ul>
+		</div>
+	</div>
+
+
+
+    </div>
+    <div id="content-right" class="col-md-8">
+    
+<article id="post">
+	<div class="post-title">
+  <h1>SpringMVC常用注解</h1>
+  	</div>
+  <div class="page-meta">
+  	<span class="fa-wrap">
+  		<i class="fa fa-clock-o"></i>
+  		<span class="date-meta">2021-08-17</span>
+  	</span>
+  	<span class="fa-wrap">
+  		
+  		<i class="fa fa-tags"></i>
+  		<span class="tags-meta">SpringMVC</span>
+  		
+  	</span>
+  	<span class="fa-wrap">
+  		
+  	</span>
+  </div>
+  <div class="post-content">
+  <h1 id="SpringMVC常用注解介绍"><a href="#SpringMVC常用注解介绍" class="headerlink" title="SpringMVC常用注解介绍"></a>SpringMVC常用注解介绍</h1><ul>
+<li>1、@Controller</li>
+</ul>
+<p>注解一个类表示控制器，Spring MVC会自动扫描标注了这个注解的类。</p>
+<ul>
+<li>2、@RequestMapping</li>
+</ul>
+<p>请求路径映射，可以标注类，也可以是方法，可以指定请求类型，默认不指定为全部接收。</p>
+<ul>
+<li>3、@Resource和@Autowired</li>
+</ul>
+<p>@Autowired为Spring提供的注解，需要导入包org.springframework.beans.factory.annotation.Autowired;只按照byType注入。</p>
+<p>@Resource的作用相当于@Autowired，只不过@Autowired按照byType自动注入。</p>
+<ul>
+<li>4、@ModelAttribute和 @SessionAttributes</li>
+</ul>
+<p>代表的是：该Controller的所有方法在调用前，先执行此@ModelAttribute方法，可用于注解和方法参数中，可以把这个@ModelAttribute特性，应用在BaseController当中，所有的Controller继承BaseController，即可实现在调用Controller时，先执行@ModelAttribute方法。</p>
+<p> @SessionAttributes即将值放到session作用域中，写在class上面。</p>
+<ul>
+<li>5、@PathVariable</li>
+</ul>
+<p>路径绑定变量，用于绑定restful路径上的变量。</p>
+<ul>
+<li>6、@requestParam</li>
+</ul>
+<p>放在参数前，表示只能接收参数a=b格式的数据，即 <code>Content-Type</code>为 <code>application/x-www-form-urlencoded</code>类型的内容。</p>
+<ul>
+<li>7、@ResponseBody</li>
+</ul>
+<p>放在方法上或者返回类型前，表示此方法返回的数据放在response body里面，而不是跳转页面。一般用于ajax请求，返回json数据。</p>
+<ul>
+<li>8、@Component</li>
+</ul>
+<p>相当于通用的注解，当不知道一些类归到哪个层时使用，但是不建议。</p>
+<ul>
+<li>9、@Repository</li>
+</ul>
+<p>用于注解dao层，在daoImpl类上面注解。</p>
+<ul>
+<li>10、@RequestBody</li>
+</ul>
+<p>放在参数前，表示参数从request body中获取，而不是从地址栏获取，所以这肯定是接收一个POST请求的非a=b格式的数据，即 <code>Content-Type</code>不为 <code>application/x-www-form-urlencoded</code>类型的内容。</p>
+<ul>
+<li>11、@RestController</li>
+</ul>
+<p>这个是Controller和ResponseBody的组合注解，表示@Controller标识的类里面的所有返回参数都放在response body里面。</p>
+<ul>
+<li>12、@RequestHeader</li>
+</ul>
+<p>放在方法参数前，用来获取request header中的参数值。</p>
+<ul>
+<li>13、@CookieValue</li>
+</ul>
+<p>放在方法参数前，用来获取request header cookie中的参数值。</p>
+<ul>
+<li>14、@GetMapping/PostMapping/PutMapping …</li>
+</ul>
+<p>*Mapping 是Spring4.3加入的新注解，表示特定的请求类型路径映射，而不需写RequestMethod来指定请求类型。</p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[参考一](<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzI3ODcxMzQzMw==&mid=2247484331&idx=1&sn=acf8750f5b4174cf238527498f06e307&chksm=eb53869ddc240f8bfebeb73cd5bae0fed5ebf4b349f37a62129afc7f0432fbf99500245f129a&scene=21#wechat_redirect">Spring MVC常用注解，你会几个？ (qq.com)</a>)</p>
+<p>[参考二](<a target="_blank" rel="noopener" href="https://www.cnblogs.com/leskang/p/5445698.html">springmvc常用注解标签详解 - 梦醒点灯 - 博客园 (cnblogs.com)</a>)</p>
+
+	</div>
+</article>
+
+
+
+    </div>
+  </div>
+  <div class="row">
+<div id="bottom" class="col-md-12"> 
+  <div class="bottom-nav">
+	
+	
+	<a href="https://github.com/lizehongss" class="fa fa-github fa-2x" target="_blank" title="Follow me" ></a>
+	
+	
+</div>
+<div class="bottom-info">
+	&copy; 2021 Wlaon Cycler<br>
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	theme <a href="https://github.com/lizehongss/hexo-theme-zhl" target="_blank">zhl</a>
+</div>
+</div>
+</div>
+</div>
+<div id="tool">
+  <ul>
+    <li class="fa fa-angle-up top" id="top"></li>
+  </ul>
+</div>
+  <div class="bg_content">
+    <canvas id="canvas"></canvas>
+  </div>
+  
+  <!-- scripts list from theme config.yml -->
+  
+    <script src="/js/zhl.js"></script>
+  
+    <script src="/js/bj.js"></script>
+  
+
+<!-- jQ cdn  -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<!-- bootstrap js cdn-->
+<!-- <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+
+</body>
+</html>

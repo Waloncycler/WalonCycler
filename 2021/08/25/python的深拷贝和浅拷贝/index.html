@@ -1,0 +1,203 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
+  <title>python的复制 [ 晰瓜 ]</title>
+  <!-- bootstrapcss文件 -->
+ <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<!--   
+<link rel="stylesheet" href="/css/zhl.css">
+
+ -->
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/fork-awesome.min.css">
+    
+      <link rel="stylesheet" href="/css/zhl.css">
+    
+  
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+  <div id="wrap" class="col-md-12">
+    <div id="header">
+	<div id="header-left">
+	<h1 id="header-title"> 
+	<a href="/">
+		晰瓜
+	</a>
+	</h1>
+	
+	</div>
+	<div id="header-right">
+		
+		
+		<a href="/"  title="home"><i class="fa fa-home ">home</i></a>
+		
+		<a target="_blank" rel="noopener" href="https://github.com/lizehongss/demo_show"  title="demo"><i class="fa fa-code ">demo</i></a>
+		
+		<a href="/about"  title="about"><i class="fa fa-user ">about</i></a>
+		
+		<a href="/"  title="music"><i class="fa fa-music ">music</i></a>
+		
+		
+	</div>
+</div>
+
+  </div>
+  </div>
+  <div id="content" class="row">
+    <div id="content-left" class="col-md-4">
+      
+
+	
+
+	
+	<div class="widget-wrap">
+		<h3 class="widget-title fa fa-tags">标签</h3>
+		<div class="widget tags">
+		<a class="tag-span-link" href="/tags/Markdown/" rel="tag">Markdown<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/SpringMVC/" rel="tag">SpringMVC<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/java/" rel="tag">java<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/python/" rel="tag">python<span class="tag-span-count">3</span></a> <a class="tag-span-link" href="/tags/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/" rel="tag">我的项目<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法<span class="tag-span-count">5</span></a> <a class="tag-span-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" rel="tag">数据结构和算法<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E7%AC%94%E8%AF%95/" rel="tag">笔试<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" rel="tag">计算机基础<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" rel="tag">踩坑记录<span class="tag-span-count">1</span></a>
+		</div>
+	</div>
+
+
+	
+	<div class="widget-wrap">
+		<h3 class="widget-title fa fa-archive">归档</h3>
+		<div class="widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">21</span></li></ul>
+		</div>
+	</div>
+
+
+
+    </div>
+    <div id="content-right" class="col-md-8">
+    
+<article id="post">
+	<div class="post-title">
+  <h1>python的复制</h1>
+  	</div>
+  <div class="page-meta">
+  	<span class="fa-wrap">
+  		<i class="fa fa-clock-o"></i>
+  		<span class="date-meta">2021-08-25</span>
+  	</span>
+  	<span class="fa-wrap">
+  		
+  		<i class="fa fa-tags"></i>
+  		<span class="tags-meta">python</span>
+  		
+  	</span>
+  	<span class="fa-wrap">
+  		
+  	</span>
+  </div>
+  <div class="post-content">
+  <p>在python中，对象赋值实际上是对象的引用。当创建一个对象，然后把它赋给另一个变量的时候，python并没有拷贝这个对象，而只是拷贝了这个对象的引用；</p>
+<h2 id="前期知识：Python中的对象"><a href="#前期知识：Python中的对象" class="headerlink" title="前期知识：Python中的对象"></a>前期知识：Python中的对象</h2><p>数据拷贝会涉及到Python中<strong>对象、可变类型、引用</strong>这3个概念，所有Python对象都拥有三个属性：<strong>身份、类型、值</strong>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">&quot;Li J&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(name))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(name))</span><br><span class="line"><span class="built_in">print</span>(name)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 输出：</span></span><br><span class="line"><span class="comment"># &lt;type &#x27;str&#x27;&gt;</span></span><br><span class="line"><span class="comment"># 140334394101408</span></span><br><span class="line"><span class="comment"># Li J</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="tips"><a href="#tips" class="headerlink" title="tips:"></a>tips:</h4><ul>
+<li><strong>对象有类型，变量无类型，变量是对象的标签</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="可变对象和不可变对象"><a href="#可变对象和不可变对象" class="headerlink" title="可变对象和不可变对象"></a>可变对象和不可变对象</h3><ul>
+<li>可变对象： <strong>列表、字典、集合</strong>。所谓可变是指可变对象的值可变，身份是不变的；</li>
+<li>不可变对象：<strong>数字、字符串、元组</strong>。不可变对象就是对象的身份和值都不可变。新创建的对象被关联到原来的变量名，<strong>旧对象被丢弃，垃圾回收器会在适当的时机回收这些对象。</strong></li>
+</ul>
+<h2 id="深拷贝和浅拷贝的用法和区别"><a href="#深拷贝和浅拷贝的用法和区别" class="headerlink" title="深拷贝和浅拷贝的用法和区别"></a>深拷贝和浅拷贝的用法和区别</h2><ul>
+<li><strong>Tips:</strong><ul>
+<li><code> a is b</code>中 is 是比较两个变量的对象引用是否指向同一个对象；</li>
+<li><code> a == b</code>中 == 是比较两个变量的对象的值是否相同；</li>
+<li>id() 函数就是返回对象的内存地址。</li>
+</ul>
+</li>
+</ul>
+<h3 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h3><p><strong>copy浅拷贝，没有拷贝子对象，所以原始数据改变，子对象会改变</strong></p>
+<p><strong>示例：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;浅拷贝：&quot;</span>)</span><br><span class="line"><span class="keyword">import</span> copy</span><br><span class="line">b=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;id b:&quot;</span>,<span class="built_in">id</span>(b))</span><br><span class="line">h=copy.copy(b)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;id h&quot;</span>,<span class="built_in">id</span>(h))</span><br><span class="line"><span class="built_in">print</span>(h)</span><br><span class="line">h.append(<span class="number">6</span>)</span><br><span class="line"><span class="built_in">print</span>(h)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;id h&quot;</span>,<span class="built_in">id</span>(h))</span><br><span class="line"><span class="built_in">print</span>(b)   <span class="comment">#浅拷贝新的列表h改变了，原来的b没变。</span></span><br><span class="line"> </span><br><span class="line">b[<span class="number">1</span>]=<span class="string">&#x27;n&#x27;</span>   <span class="comment">#列表元素改变后，新的列表也没变</span></span><br><span class="line"><span class="built_in">print</span>(h)</span><br><span class="line"> </span><br><span class="line">输出：</span><br><span class="line">浅拷贝：</span><br><span class="line">(<span class="string">&#x27;id b:&#x27;</span>, <span class="number">140165805110552</span>)</span><br><span class="line">(<span class="string">&#x27;id h&#x27;</span>, <span class="number">140165805110480</span>)</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">(<span class="string">&#x27;id h&#x27;</span>, <span class="number">140165805110480</span>)</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h3><p><strong>深拷贝，包含对象里面的自对象的拷贝，所以原始对象的改变不会造成深拷贝里任何子元素的改变</strong></p>
+<p><strong>示例：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line">l1 = [<span class="number">3</span>, <span class="number">4</span>, a]</span><br><span class="line">l2 = copy.deepcopy(l1)</span><br><span class="line"><span class="built_in">print</span>(l1)</span><br><span class="line"><span class="built_in">print</span>(l2)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(l1))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(l2))</span><br><span class="line">a[<span class="number">0</span>] = <span class="number">11</span></span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(l1))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(l2))</span><br><span class="line"><span class="built_in">print</span>(l1)</span><br><span class="line"><span class="built_in">print</span>(l2)</span><br><span class="line"> </span><br><span class="line">输出：</span><br><span class="line">[<span class="number">3</span>, <span class="number">4</span>, [<span class="number">1</span>, <span class="number">2</span>]]</span><br><span class="line">[<span class="number">3</span>, <span class="number">4</span>, [<span class="number">1</span>, <span class="number">2</span>]]</span><br><span class="line"><span class="number">140673014398488</span></span><br><span class="line"><span class="number">140672779715720</span></span><br><span class="line"><span class="number">140673014398488</span></span><br><span class="line"><span class="number">140672779715720</span></span><br><span class="line">[<span class="number">3</span>, <span class="number">4</span>, [<span class="number">11</span>, <span class="number">2</span>]]</span><br><span class="line">[<span class="number">3</span>, <span class="number">4</span>, [<span class="number">1</span>, <span class="number">2</span>]]</span><br></pre></td></tr></table></figure>
+
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ul>
+<li><p>不可变对象在赋值时会开辟新空间；可变对象在赋值时，修改一个的值，另一个也会发生改变；</p>
+</li>
+<li><p>深、浅拷贝对不可变对象拷贝时，不开辟新空间，相当于赋值操作；浅拷贝在拷贝时，只拷贝第一层中的引用，如果元素是可变对象，并且被修改，那么拷贝的对象也会发生变化；</p>
+</li>
+<li><p>深拷贝在拷贝时会逐层进行拷贝，直到所有的引用都是不可变对象为止；</p>
+</li>
+<li><p>Python中有多种方式实现浅拷贝，copy模块的copy函数、对象的copy函数、工厂方法、切片等；大多数情况下，编写程序时都是使用浅拷贝，除非有特定的需求；浅拷贝的优点：拷贝速度快，占用空间少，拷贝效率高。</p>
+</li>
+</ul>
+<h2 id="为什么python中的拷贝默认为浅拷贝？"><a href="#为什么python中的拷贝默认为浅拷贝？" class="headerlink" title="为什么python中的拷贝默认为浅拷贝？"></a>为什么python中的拷贝默认为浅拷贝？</h2><ul>
+<li><p>时间角度：浅拷贝花费时间更少；</p>
+</li>
+<li><p>空间角度：浅拷贝花费内存更少；</p>
+</li>
+<li><p>效率角度：浅拷贝只拷贝顶层数据，一般情况下比深拷贝效率高。</p>
+</li>
+</ul>
+<h2 id="实例运用：防止数据篡改"><a href="#实例运用：防止数据篡改" class="headerlink" title="实例运用：防止数据篡改"></a>实例运用：防止数据篡改</h2><p>???</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1627356407968660842&wfr=spider&for=pc">参考一：Python 程序员如何防止数据被修改</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/bufengzj/article/details/90486991?ops_request_misc=%7B%22request_id%22:%22162985559416780274110990%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=162985559416780274110990&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-90486991.pc_search_result_control_group&utm_term=python+%E6%B5%85%E6%8B%B7%E8%B4%9D&spm=1018.2226.3001.4187">参考二：python:深拷贝,浅拷贝，赋值引用</a></p>
+
+	</div>
+</article>
+
+
+
+    </div>
+  </div>
+  <div class="row">
+<div id="bottom" class="col-md-12"> 
+  <div class="bottom-nav">
+	
+	
+	<a href="https://github.com/lizehongss" class="fa fa-github fa-2x" target="_blank" title="Follow me" ></a>
+	
+	
+</div>
+<div class="bottom-info">
+	&copy; 2021 Wlaon Cycler<br>
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	theme <a href="https://github.com/lizehongss/hexo-theme-zhl" target="_blank">zhl</a>
+</div>
+</div>
+</div>
+</div>
+<div id="tool">
+  <ul>
+    <li class="fa fa-angle-up top" id="top"></li>
+  </ul>
+</div>
+  <div class="bg_content">
+    <canvas id="canvas"></canvas>
+  </div>
+  
+  <!-- scripts list from theme config.yml -->
+  
+    <script src="/js/zhl.js"></script>
+  
+    <script src="/js/bj.js"></script>
+  
+
+<!-- jQ cdn  -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<!-- bootstrap js cdn-->
+<!-- <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+
+</body>
+</html>

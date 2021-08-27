@@ -1,0 +1,220 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
+  <title>算法复杂度分析 [ 晰瓜 ]</title>
+  <!-- bootstrapcss文件 -->
+ <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<!--   
+<link rel="stylesheet" href="/css/zhl.css">
+
+ -->
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/fork-awesome.min.css">
+    
+      <link rel="stylesheet" href="/css/zhl.css">
+    
+  
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+  <div id="wrap" class="col-md-12">
+    <div id="header">
+	<div id="header-left">
+	<h1 id="header-title"> 
+	<a href="/">
+		晰瓜
+	</a>
+	</h1>
+	
+	</div>
+	<div id="header-right">
+		
+		
+		<a href="/"  title="home"><i class="fa fa-home ">home</i></a>
+		
+		<a target="_blank" rel="noopener" href="https://github.com/lizehongss/demo_show"  title="demo"><i class="fa fa-code ">demo</i></a>
+		
+		<a href="/about"  title="about"><i class="fa fa-user ">about</i></a>
+		
+		<a href="/"  title="music"><i class="fa fa-music ">music</i></a>
+		
+		
+	</div>
+</div>
+
+  </div>
+  </div>
+  <div id="content" class="row">
+    <div id="content-left" class="col-md-4">
+      
+
+	
+
+	
+	<div class="widget-wrap">
+		<h3 class="widget-title fa fa-tags">标签</h3>
+		<div class="widget tags">
+		<a class="tag-span-link" href="/tags/Markdown/" rel="tag">Markdown<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/SpringMVC/" rel="tag">SpringMVC<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/java/" rel="tag">java<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/python/" rel="tag">python<span class="tag-span-count">3</span></a> <a class="tag-span-link" href="/tags/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/" rel="tag">我的项目<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法<span class="tag-span-count">5</span></a> <a class="tag-span-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" rel="tag">数据结构和算法<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E7%AC%94%E8%AF%95/" rel="tag">笔试<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" rel="tag">计算机基础<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" rel="tag">踩坑记录<span class="tag-span-count">1</span></a>
+		</div>
+	</div>
+
+
+	
+	<div class="widget-wrap">
+		<h3 class="widget-title fa fa-archive">归档</h3>
+		<div class="widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">21</span></li></ul>
+		</div>
+	</div>
+
+
+
+    </div>
+    <div id="content-right" class="col-md-8">
+    
+<article id="post">
+	<div class="post-title">
+  <h1>算法复杂度分析</h1>
+  	</div>
+  <div class="page-meta">
+  	<span class="fa-wrap">
+  		<i class="fa fa-clock-o"></i>
+  		<span class="date-meta">2021-08-16</span>
+  	</span>
+  	<span class="fa-wrap">
+  		
+  		<i class="fa fa-tags"></i>
+  		<span class="tags-meta">数据结构与算法</span>
+  		
+  	</span>
+  	<span class="fa-wrap">
+  		
+  	</span>
+  </div>
+  <div class="post-content">
+  <h2 id="算法复杂度"><a href="#算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度</h2><p>算法的效率主要由时间复杂度和空间复杂度来评估，在设计算法时，时间复杂度比空间复杂度更容易出问题，一般情况下只针对时间复杂度进行分析。</p>
+<h3 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h3><p>评估执行程序所需时间，分析程序对处理器的使用程度，常用大O计法：T(n)=O(f(n)) 表示。<br>$$<br>Ο(1)＜Ο(log_2n)＜Ο(n)＜Ο(nlog_2n)＜Ο(n^2)＜Ο(n^3)＜…＜Ο(2^n)＜Ο(n!)<br>$$<br><img src="C:\Users\walon\Desktop\R.png" style="zoom:25%;" /></p>
+<p>Ο(1)表示基本语句的执行次数是一个常数，一般来说，只要算法中不存在循环语句，其时间复杂度就是Ο(1)。其中Ο(log2n)、Ο(n)、 Ο(nlog2n)、Ο(n2)和Ο(n3)称为多项式时间，而Ο(2n)和Ο(n!)称为指数时间。计算机科学家普遍认为前者（即多项式时间复杂度的算法）是有效算法，把这类问题称为P（Polynomial,多项式）类问题，而把后者（即指数时间复杂度的算法）称为NP（Non-Deterministic Polynomial, 非确定多项式）问题。</p>
+<p><strong>经验规则：如果一个算法的复杂度为c 、 log2n 、n 、 nlog2n ,那么这个算法时间效率比较高 ，如果是2^n ,3^n ,n!，那么稍微大一些的n就会令这个算法。</strong></p>
+<ul>
+<li><p><strong>基本法则</strong></p>
+<ul>
+<li><p>加减法则：如果算法的代码是平行增加的，那么就需要加上相应的时间复杂度；</p>
+</li>
+<li><p>乘除法则：如果算法的代码是循环嵌套或函数的嵌套，那么就需要乘上相应的时间复杂度。</p>
+</li>
+<li><p>加法常数项可以忽略；</p>
+</li>
+<li><p>除去最高阶项，其他次项可以忽略；</p>
+</li>
+<li><p>与最高次项相乘的常数可以忽略。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>常见的时间复杂度</strong></p>
+<p><img src="https://img-blog.csdn.net/20130920172327687?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvem9sYWxhZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
+<ul>
+<li><strong>O(1)</strong></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Temp=i; <span class="comment">// 语句执行频度 = 1</span></span><br><span class="line">i=j; <span class="comment">// 语句执行频度 = 1</span></span><br><span class="line">j=temp;  <span class="comment">// 语句执行频度 = 1</span></span><br><span class="line"><span class="comment">// 如果算法的执行时间不随着问题规模n的增加而增长，即使算法中有上千条语句，其执行时间也不过是一个较大的常数。此类算法的时间复杂度是O(1)。</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><strong>线性阶O(n)</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a =<span class="number">0</span>; <span class="comment">// 语句执行频度 = 1</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=n; i++) &#123;</span><br><span class="line">	a++;   <span class="comment">// 语句执行频度 = n</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// f(n) = n +1</span></span><br><span class="line"><span class="comment">// T(n) = O(n+1) = O(n) </span></span><br></pre></td></tr></table></figure></li>
+<li><p><strong>对数阶 O(logn)</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">1</span>;  <span class="comment">// 语句执行频度 = 1</span></span><br><span class="line"><span class="keyword">while</span>(i&lt;=n) &#123;</span><br><span class="line">	i = i*<span class="number">2</span>;  <span class="comment">// 语句执行频度 = f(n)</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 2^f(n)&lt;=n;  --&gt; f(n)&lt;=log2n    </span></span><br><span class="line"><span class="comment">// 取最大值: f(n)=log2n</span></span><br><span class="line"><span class="comment">// T(n) = O(log2n)</span></span><br></pre></td></tr></table></figure></li>
+<li><p><strong>线性对数阶 O(nlogn)</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 示例</span></span><br><span class="line"><span class="keyword">int</span> b = <span class="number">0</span>; <span class="comment">// 语句执行度 = 1</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;n; j+=i) &#123;</span><br><span class="line">		b++; <span class="comment">// 语句执行度 = f(n)</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 推到过程 ？？？</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p><strong>平方阶 O(n²)</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">0</span> <span class="comment">// 语句执行频度 = 1</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;i; j++) &#123;</span><br><span class="line">		a++; <span class="comment">// 语句执行频度 = (n-1)*(n-1)</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// f(n) = n^2 -2n +1 +1 = n^2 -2n</span></span><br><span class="line"><span class="comment">// T(n)= O(n^2 -2n) = O(n^2)</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>计算方法及具体步奏</strong></p>
+<ul>
+<li><strong>找出算法中的基本语句</strong></li>
+</ul>
+<p>　　算法中执行次数最多的那条语句就是基本语句，通常是最内层循环的循环体。</p>
+<ul>
+<li><strong>计算基本语句的执行次数的数量级</strong></li>
+</ul>
+<p>　　只需计算基本语句执行次数的数量级，这就意味着只要保证基本语句执行次数的函数中的最高次幂正确即可，可以忽略所有低次幂和最高次幂的系数。这样能够简化算法分析，并且使注意力集中在最重要的一点上：增长率。</p>
+<ul>
+<li><strong>用大Ο记号表示算法的时间性能</strong></li>
+</ul>
+<p>　　将基本语句执行次数的数量级放入大Ο记号中;</p>
+<p>​        如果算法中包含嵌套的循环，则基本语句通常是最内层的循环体，如果算法中包含并列的循环，则将并列循环的时间复杂度相加。</p>
+</li>
+</ul>
+<h3 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h3><p><strong>算法空间：一个算法在计算机存储器上所占用的存储空间，包括（1）存储算法本身所占用的存储空间，（2）算法的输入输出数据所占用的存储空间和（3）算法在运行过程中临时占用的存储空间这三个方面；</strong></p>
+<p><strong>（1）算法的输入输出数据所占用的存储空间是由要解决的问题决定的，是通过参数表由调用函数传递而来的，它不随本算法的不同而改变；</strong></p>
+<p><strong>（2）存储算法本身所占用的存储空间与算法书写的长短成正比，要压缩这方面的存储空间，就必须编写出较短的算法；</strong></p>
+<p><strong>（3）算法在运行过程中临时占用的存储空间随算法的不同而异，有的算法只需要占用少量的临时工作单元，而且不随问题规模的大小而改变，我们称这种算法是“就地&quot;进行的，是节省存储的算法。</strong></p>
+<p>评估执行程序所需的存储空间，可以估算出程序对计算机内存的使用程度，常用：S(n)=O(f(n))表示，其中n为问题的规模，f(n)为语句关于n所占存储空间的函数。</p>
+<ul>
+<li><p>当一个算法的空间复杂度为一个常量，即不随被处理数据量n的大小而改变时，可表示为O(1)；</p>
+</li>
+<li><p>当一个算法的空间复杂度与以2为底的n的对数成正比时，可表示为O(log2n)；</p>
+</li>
+<li><p>当一个算法的空间复杂度与n成线性比例关系时，可表示为0(n)；</p>
+</li>
+</ul>
+<h2 id="References"><a href="#References" class="headerlink" title="References:"></a>References:</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zolalad/article/details/11848739?ops_request_misc=%7B%22request_id%22:%22162986173416780262571158%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=162986173416780262571158&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-3-11848739.pc_search_result_control_group&utm_term=%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6&spm=1018.2226.3001.4187">参考一：算法的时间复杂度和空间复杂度-总结</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/leikun153/article/details/79143892?utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-17.base&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-17.base">参考二：什么是时间复杂度和空间复杂度</a></p>
+
+	</div>
+</article>
+
+
+
+    </div>
+  </div>
+  <div class="row">
+<div id="bottom" class="col-md-12"> 
+  <div class="bottom-nav">
+	
+	
+	<a href="https://github.com/lizehongss" class="fa fa-github fa-2x" target="_blank" title="Follow me" ></a>
+	
+	
+</div>
+<div class="bottom-info">
+	&copy; 2021 Wlaon Cycler<br>
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	theme <a href="https://github.com/lizehongss/hexo-theme-zhl" target="_blank">zhl</a>
+</div>
+</div>
+</div>
+</div>
+<div id="tool">
+  <ul>
+    <li class="fa fa-angle-up top" id="top"></li>
+  </ul>
+</div>
+  <div class="bg_content">
+    <canvas id="canvas"></canvas>
+  </div>
+  
+  <!-- scripts list from theme config.yml -->
+  
+    <script src="/js/zhl.js"></script>
+  
+    <script src="/js/bj.js"></script>
+  
+
+<!-- jQ cdn  -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<!-- bootstrap js cdn-->
+<!-- <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+
+</body>
+</html>
