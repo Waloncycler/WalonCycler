@@ -1,0 +1,208 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
+  <title>HTTP协议与HTTPS协议 [ 晰瓜 ]</title>
+  <!-- bootstrapcss文件 -->
+ <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<!--   
+<link rel="stylesheet" href="/css/zhl.css">
+
+ -->
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/fork-awesome.min.css">
+    
+      <link rel="stylesheet" href="/css/zhl.css">
+    
+  
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+  <div id="wrap" class="col-md-12">
+    <div id="header">
+	<div id="header-left">
+	<h1 id="header-title"> 
+	<a href="/">
+		晰瓜
+	</a>
+	</h1>
+	
+	</div>
+	<div id="header-right">
+		
+		
+		<a href="/"  title="home"><i class="fa fa-home ">home</i></a>
+		
+		<a target="_blank" rel="noopener" href="https://github.com/lizehongss/demo_show"  title="demo"><i class="fa fa-code ">demo</i></a>
+		
+		<a href="/about"  title="about"><i class="fa fa-user ">about</i></a>
+		
+		<a href="/"  title="music"><i class="fa fa-music ">music</i></a>
+		
+		
+	</div>
+</div>
+
+  </div>
+  </div>
+  <div id="content" class="row">
+    <div id="content-left" class="col-md-4">
+      
+
+	
+
+	
+	<div class="widget-wrap">
+		<h3 class="widget-title fa fa-tags">标签</h3>
+		<div class="widget tags">
+		<a class="tag-span-link" href="/tags/Linux/" rel="tag">Linux<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/Markdown/" rel="tag">Markdown<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/SpringMVC/" rel="tag">SpringMVC<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/java/" rel="tag">java<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/python/" rel="tag">python<span class="tag-span-count">8</span></a> <a class="tag-span-link" href="/tags/%E5%88%B7%E9%A2%98%E4%B9%8B%E6%97%85/" rel="tag">刷题之旅<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/" rel="tag">我的项目<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法<span class="tag-span-count">6</span></a> <a class="tag-span-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" rel="tag">数据结构和算法<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E7%AC%94%E8%AF%95/" rel="tag">笔试<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" rel="tag">计算机基础<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" rel="tag">踩坑记录<span class="tag-span-count">2</span></a>
+		</div>
+	</div>
+
+
+	
+	<div class="widget-wrap">
+		<h3 class="widget-title fa fa-archive">归档</h3>
+		<div class="widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">33</span></li></ul>
+		</div>
+	</div>
+
+
+
+    </div>
+    <div id="content-right" class="col-md-8">
+    
+<article id="post">
+	<div class="post-title">
+  <h1>HTTP协议与HTTPS协议</h1>
+  	</div>
+  <div class="page-meta">
+  	<span class="fa-wrap">
+  		<i class="fa fa-clock-o"></i>
+  		<span class="date-meta">2021-08-29</span>
+  	</span>
+  	<span class="fa-wrap">
+  		
+  		<i class="fa fa-tags"></i>
+  		<span class="tags-meta">计算机网络</span>
+  		
+  	</span>
+  	<span class="fa-wrap">
+  		
+  	</span>
+  </div>
+  <div class="post-content">
+  <h1 id="HTTP协议与HTTPS协议"><a href="#HTTP协议与HTTPS协议" class="headerlink" title="HTTP协议与HTTPS协议"></a>HTTP协议与HTTPS协议</h1><h3 id="基本概念："><a href="#基本概念：" class="headerlink" title="基本概念："></a>基本概念：</h3><h5 id="HTTP（Hyper-Text-Transfer-Protocol，超文本传输协议）：是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从WWW服务器传输超文本到本地浏览器的传输协议，它可以使浏览器更加高效，使网络传输减少；"><a href="#HTTP（Hyper-Text-Transfer-Protocol，超文本传输协议）：是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从WWW服务器传输超文本到本地浏览器的传输协议，它可以使浏览器更加高效，使网络传输减少；" class="headerlink" title="HTTP（Hyper Text Transfer Protocol，超文本传输协议）：是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从WWW服务器传输超文本到本地浏览器的传输协议，它可以使浏览器更加高效，使网络传输减少；"></a>HTTP（Hyper Text Transfer Protocol，<strong>超文本传输协议</strong>）：是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从WWW服务器传输超文本到本地浏览器的传输协议，它可以使浏览器更加高效，使网络传输减少；</h5><h5 id="HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL；"><a href="#HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL；" class="headerlink" title="HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL；"></a>HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL；</h5><h2 id="一、HTTP协议"><a href="#一、HTTP协议" class="headerlink" title="一、HTTP协议"></a>一、HTTP协议</h2><p>HTTP是一个基于<strong>TCP/IP通信协议(三次握手四次挥手)<strong>来传递数据的协议,默认</strong>端口为80</strong>，传输的数据类型为HTML 文件，图片文件, 查询结果等；</p>
+<p>HTTP协议一般用于<strong>B/S架构（_请求（Request）/应答（Response）模型_）</strong>，浏览器作为HTTP客户端通过URL向HTTP服务端即WEB服务器发送所有请求。</p>
+<h3 id="HTTP使用统一资源标识符（Uniform-Resource-Identifiers-URI）来传输数据和建立连接。"><a href="#HTTP使用统一资源标识符（Uniform-Resource-Identifiers-URI）来传输数据和建立连接。" class="headerlink" title="HTTP使用统一资源标识符（Uniform Resource Identifiers, URI）来传输数据和建立连接。"></a>HTTP使用统一资源标识符（Uniform Resource Identifiers, URI）来传输数据和建立连接。</h3><p><strong>URI（Uniform Resource Identifier 统一资源标识符）</strong>：用来**标示 **一个具体的资源的，我们可以通过 URI 知道一个资源是什么;</p>
+<p><strong>URL（Uniform Resource Location 统一资源定位符）</strong> ：用来<strong>定位</strong>具体的资源的，标示了一个具体的资源位置。互联网上的<strong>每个文件都有一个唯一的URL</strong>。</p>
+<h3 id="传输流成程"><a href="#传输流成程" class="headerlink" title="传输流成程"></a>传输流成程</h3><p><img src="https://img2018.cnblogs.com/blog/733795/201901/733795-20190127120128114-789633815.png" alt="img"></p>
+<p>1、 客户端通过TCP的<strong>三次握手</strong>建立与服务器的连接;<br>2、当TCP连接成功建立后，客户端向服务器发送HTTP请求;<br>3、服务器收到客户端的HTTP请求后，将回复响应数据包，并向客户端发送数据;<br>4、客户端通过TCP<strong>四次挥手</strong>，与服务器断开TCP连接。</p>
+<h3 id="HTTP协议与TCP-IP协议的关系-重要"><a href="#HTTP协议与TCP-IP协议的关系-重要" class="headerlink" title="HTTP协议与TCP/IP协议的关系(重要)"></a><em>HTTP协议与TCP/IP协议的关系</em>(重要)</h3><h5 id="HTTP的长连接和短连接本质上是TCP-长连接和短连接-。"><a href="#HTTP的长连接和短连接本质上是TCP-长连接和短连接-。" class="headerlink" title="HTTP的长连接和短连接本质上是TCP_长连接和短连接_。"></a>HTTP的长连接和短连接本质上是TCP_长连接和短连接_。</h5><ul>
+<li>在_HTTP/1.0_中，默认使用的是<strong>短连接</strong>。也就是说，浏览器和服务器每进行一次HTTP操作，就建立一次连接，但任务结束就中断连接。</li>
+<li>从 _HTTP/1.1_起，默认使用<strong>长连接</strong>，用以保持在<strong>设定时间内</strong>的连接特性。使用长连接的HTTP协议，会在响应头有加入这行代码：Connection:keep-alive<br>在使用长连接的情况下，当一个网页打开完成后，客户端和服务器之间用于传输HTTP数据的 TCP连接不会关闭，如果客户端再次访问这个服务器上的网页，会继续使用这一条已经建立的连接。</li>
+</ul>
+<h5 id="HTTP属于应用层协议，在传输层使用TCP协议，在网络层使用IP协议。"><a href="#HTTP属于应用层协议，在传输层使用TCP协议，在网络层使用IP协议。" class="headerlink" title="HTTP属于应用层协议，在传输层使用TCP协议，在网络层使用IP协议。"></a>HTTP属于应用层协议，在传输层使用TCP协议，在网络层使用IP协议。</h5><h5 id="IP协议主要解决网络路由和寻址问题，TCP协议主要解决如何在IP层之上可靠的传递数据包，使在网络上的另一端收到发端发出的所有包，并且顺序与发出顺序一致。TCP有可靠，面向连接的特点。"><a href="#IP协议主要解决网络路由和寻址问题，TCP协议主要解决如何在IP层之上可靠的传递数据包，使在网络上的另一端收到发端发出的所有包，并且顺序与发出顺序一致。TCP有可靠，面向连接的特点。" class="headerlink" title="IP协议主要解决网络路由和寻址问题，TCP协议主要解决如何在IP层之上可靠的传递数据包，使在网络上的另一端收到发端发出的所有包，并且顺序与发出顺序一致。TCP有可靠，面向连接的特点。"></a>IP协议主要解决网络路由和寻址问题，TCP协议主要解决如何在IP层之上可靠的传递数据包，使在网络上的另一端收到发端发出的所有包，并且顺序与发出顺序一致。TCP有可靠，面向连接的特点。</h5><h3 id="HTTP-1-0-与-HTTP-2-0-的区别（重要）"><a href="#HTTP-1-0-与-HTTP-2-0-的区别（重要）" class="headerlink" title="HTTP 1.0 与 HTTP 2.0 的区别（重要）"></a>HTTP 1.0 与 HTTP 2.0 的区别（重要）</h3><p><strong>HTTP 0.9：</strong>最初的版本，只有一个命令GET，服务器只能回应HTML格式字符串。</p>
+<p>1.长连接<br>HTTP 1.1支持长连接（PersistentConnection）和请求的流水线（Pipelining）处理，在一个TCP连接上可以传送多个HTTP请求和响应，减少了建立和关闭连接的消耗和延迟，在HTTP1.1中默认开启Connection： keep-alive，弥补了HTTP1.0每次请求都要创建连接的缺点<br>2.缓存处理<br>在HTTP1.0中主要使用header里的If-Modified-Since,Expires来做为缓存判断的标准，HTTP1.1则引入了更多的缓存控制策略例如Entity tag，If-Unmodified-Since, If-Match, If-None-Match等更多可供选择的缓存头来控制缓存策略<br>3.带宽优化和网络连接的使用<br>HTTP1.0中，存在一些浪费带宽的现象，例如：客户端只是需要某个对象的一部分，而服务器却将整个对象送过来了，并且不支持断点续传功能，HTTP1.1则在请求头引入了range头域，它允许只请求资源的某个部分，即返回码是206（Partial Content），方便了开发者自由的选择以便于充分利用带宽和连接<br>4.错误通知的管理<br>在HTTP1.1中新增24个状态响应码，如<br>409（Conflict）表示请求的资源与资源当前状态冲突；.<br>410（Gone）表示服务器上的某个资源被永久性的删除<br>5.Host头处理<br>在HTTP1.0中认为每台服务器都绑定一个唯一的IP地址，因此，请求消息中的URL并没有传递主机名（hostname）。但随着虚拟主机技术的发展，在一台物理服务器上可以存在多个虚拟主机（Multi-homed Web Servers），并且它们共享一个IP地址。HTTP1.1的请求消息和响应消息都应支持Host头域，且请求消息中如果没有Host头域会报告一个错误（400 Bad Request）</p>
+<h3 id="存在问题"><a href="#存在问题" class="headerlink" title="存在问题"></a>存在问题</h3><p><strong>1、请求信息明文传输，容易被窃听截取。</strong><br><strong>2、数据的完整性未校验，容易被篡改</strong><br><strong>3、没有验证对方身份，存在冒充危险</strong></p>
+<h2 id="二、HTTPS协议"><a href="#二、HTTPS协议" class="headerlink" title="二、HTTPS协议"></a>二、HTTPS协议</h2><h5 id="HTTPS协议的主要作用可以分为两种：一种是建立一个信息安全通道，来保证数据传输的安全；另一种就是确认网站的真实性。"><a href="#HTTPS协议的主要作用可以分为两种：一种是建立一个信息安全通道，来保证数据传输的安全；另一种就是确认网站的真实性。" class="headerlink" title="HTTPS协议的主要作用可以分为两种：一种是建立一个信息安全通道，来保证数据传输的安全；另一种就是确认网站的真实性。"></a>HTTPS协议的主要作用可以分为两种：一种是建立一个信息安全通道，来保证数据传输的安全；另一种就是确认网站的真实性。</h5><h3 id="数据传输流程"><a href="#数据传输流程" class="headerlink" title="数据传输流程"></a>数据传输流程</h3><p><img src="https://upload-images.jianshu.io/upload_images/5654620-bbc1ec86072abdb1.jpg" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5654620-b790fff849af6ceb.png" alt="img"></p>
+<ol>
+<li><p>首先客户端通过URL访问服务器建立SSL连接（<strong>客户端发起HTTPS请求</strong>）;</p>
+<p>即用户在浏览器里输入一个https网址连接到服务器端口。</p>
+</li>
+<li><p>服务端收到客户端请求后，会将网站支持的证书信息（证书中包含公钥）传送一份给客户端（<strong>服务端初步响应</strong>）；</p>
+<p>采用HTTPS协议的服务器必须要有一套数字证书，这套证书其实就是一对公钥和私钥，可以想象成一把钥匙和一个锁头，只有你一个人有这把钥匙，你可以把锁头给别人，别人可以用这个锁把重要的东西锁起来，然后发给你，因为只有你一个人有这把钥匙，所以只有你才能看到被这把锁锁起来的东西。将证书发回给浏览器，证书包含证书的颁发机构、过期时间等。</p>
+</li>
+<li><p>客户端的服务器开始协商SSL连接的安全等级，也就是信息加密的等级（<strong>客户端解析证书</strong>）；</p>
+<p>客户端首先会验证证书是否有效，比如颁发证书的机构是否合法，证书中包含的网站地址是否与正在访问的地址一致、过期时间等，如果发现异常，则提示证书存在问题，如果证书没有问题，那么客户端就生成一个随机值，然后用证书对该随机值进行加密。</p>
+</li>
+<li><p>客户端的浏览器根据双方同意的安全等级，建立会话密钥，然后利用网站的公钥将会话密钥加密，并传送给网站（<strong>客户端发送加密信息</strong>）；</p>
+<p>客户端发送的是用证书加密后的随机值。</p>
+</li>
+<li><p>服务器利用自己的私钥解密出会话密钥（<strong>服务器解密信息</strong>）；</p>
+<p>服务端用私钥解密后，得到了客户端传过来的随机值，然后把内容通过该值进行对称加密（所谓对称加密就是将信息和私钥通过某种算法混合在一起）。</p>
+</li>
+<li><p>服务器利用会话密钥加密与客户端之间的通信（<strong>服务器发送加密后的信息</strong>）；</p>
+<p>服务器发送的是服务端用随机值进行对称加密后的信息。</p>
+</li>
+<li><p><strong>客户端解密信息</strong></p>
+<p>客户端用之前生成的随机值解密服务端传过来的信息，客户端就获取了解密后的内容。</p>
+</li>
+</ol>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p><strong>1、使用HTTPS协议可认证用户和服务器，_确保数据发送到正确的客户机和服务器_；</strong></p>
+<p><strong>2、HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，要比http协议安全，<em>可防止数据在传输过程中不被窃取、改变，确保数据的完整性</em>;</strong></p>
+<p><strong>3、HTTPS是现行架构下最安全的解决方案，虽然不是绝对安全，但它大幅增加了中间人攻击的成本。</strong></p>
+<h3 id="存在问题-1"><a href="#存在问题-1" class="headerlink" title="存在问题"></a>存在问题</h3><p><strong>1、HTTPS协议多次握手，导致页面的加载时间延长近50%，增加10%到20%的耗电；</strong></p>
+<p><strong>2、HTTPS连接缓存不如HTTP高效，会增加数据开销和功耗；</strong></p>
+<p><strong>3、申请SSL证书需要钱，功能越强大的证书费用越高，个人网站、小网站没有必要一般不会用;</strong></p>
+<p><strong>4、SSL涉及到的安全算法会消耗 CPU 资源，对服务器资源消耗较大；</strong></p>
+<p><strong>5、SSL证书通常需要绑定IP，不能在同一IP上绑定多个域名，IPv4资源不可能支撑这个消耗；</strong></p>
+<p><strong>6、HTTPS协议的加密范围也比较有限，在黑客攻击、拒绝服务攻击、服务器劫持等方面几乎起不到什么作用。</strong>最关键的，SSL证书的信用链体系并不安全，特别是在某些国家可以控制CA根证书的情况下，中间人攻击一样可行。</p>
+<h2 id="三、HTTPS和HTTP的区别"><a href="#三、HTTPS和HTTP的区别" class="headerlink" title="三、HTTPS和HTTP的区别"></a>三、<strong>HTTPS和HTTP的区别</strong></h2><p><strong>1、HTTPS是HTTP协议的安全版本，HTTP协议的数据传输是明文的，是无状态不安全的，HTTPS使用了SSL/TLS协议构建的可进行加密传输、身份认证的网络协议；</strong></p>
+<p><strong>2、http和https使用连接方式不同，_默认端口也不一样，http是80，https是443_；</strong></p>
+<p><strong>3、https协议需要到ca申请证书，一般免费证书较少，因而需要一定费用；</strong></p>
+<h2 id="四、知识拓展："><a href="#四、知识拓展：" class="headerlink" title="四、知识拓展："></a>四、知识拓展：</h2><h3 id="SSL（Secure-Sockets-Layer，安全套接字层）协议"><a href="#SSL（Secure-Sockets-Layer，安全套接字层）协议" class="headerlink" title="SSL（Secure Sockets Layer，安全套接字层）协议"></a>SSL（Secure Sockets Layer，安全套接字层）协议</h3><p>SSL（Secure Socket Layer，安全套接字层）：1994年为 Netscape 所研发，<strong>SSL 协议位于 TCP/IP 协议与各种应用层协议之间，为数据通讯提供安全支持</strong>。</p>
+<h3 id="TLS（Transport-Layer-Security，传输层安全）协议"><a href="#TLS（Transport-Layer-Security，传输层安全）协议" class="headerlink" title="TLS（Transport Layer Security，传输层安全）协议"></a>TLS（Transport Layer Security，传输层安全）协议</h3><p>TLS（Transport Layer Security，传输层安全）：其前身是 SSL，它最初的几个版本（SSL 1.0、SSL 2.0、SSL 3.0）由网景公司开发，1999年从 3.1 开始被 IETF 标准化并改名，发展至今已经有 TLS 1.0、TLS 1.1、TLS 1.2 三个版本。SSL3.0和TLS1.0由于存在安全漏洞，已经很少被使用到。TLS 1.3 改动会比较大，目前还在草案阶段，目前使用最广泛的是TLS 1.1、TLS 1.2。</p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/72616216">参考一：十分钟搞懂HTTP和HTTPS协议</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/sueyyyy/p/12012570.html">参考二：http协议与https协议的区别</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38289815/article/details/80969419">参考三：HTTP 和 HTTPS 的区别</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Erma/p/10325998.html">参考四：HTTP协议分析</a></p>
+
+	</div>
+</article>
+
+
+
+    </div>
+  </div>
+  <div class="row">
+<div id="bottom" class="col-md-12"> 
+  <div class="bottom-nav">
+	
+	
+	<a href="https://github.com/lizehongss" class="fa fa-github fa-2x" target="_blank" title="Follow me" ></a>
+	
+	
+</div>
+<div class="bottom-info">
+	&copy; 2021 Wlaon Cycler<br>
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	theme <a href="https://github.com/lizehongss/hexo-theme-zhl" target="_blank">zhl</a>
+</div>
+</div>
+</div>
+</div>
+<div id="tool">
+  <ul>
+    <li class="fa fa-angle-up top" id="top"></li>
+  </ul>
+</div>
+  <div class="bg_content">
+    <canvas id="canvas"></canvas>
+  </div>
+  
+  <!-- scripts list from theme config.yml -->
+  
+    <script src="/js/zhl.js"></script>
+  
+    <script src="/js/bj.js"></script>
+  
+
+<!-- jQ cdn  -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<!-- bootstrap js cdn-->
+<!-- <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+
+</body>
+</html>

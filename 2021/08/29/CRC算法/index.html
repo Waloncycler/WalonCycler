@@ -1,0 +1,184 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
+  <title>CRC算法 [ 晰瓜 ]</title>
+  <!-- bootstrapcss文件 -->
+ <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<!--   
+<link rel="stylesheet" href="/css/zhl.css">
+
+ -->
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/fork-awesome.min.css">
+    
+      <link rel="stylesheet" href="/css/zhl.css">
+    
+  
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+  <div id="wrap" class="col-md-12">
+    <div id="header">
+	<div id="header-left">
+	<h1 id="header-title"> 
+	<a href="/">
+		晰瓜
+	</a>
+	</h1>
+	
+	</div>
+	<div id="header-right">
+		
+		
+		<a href="/"  title="home"><i class="fa fa-home ">home</i></a>
+		
+		<a target="_blank" rel="noopener" href="https://github.com/lizehongss/demo_show"  title="demo"><i class="fa fa-code ">demo</i></a>
+		
+		<a href="/about"  title="about"><i class="fa fa-user ">about</i></a>
+		
+		<a href="/"  title="music"><i class="fa fa-music ">music</i></a>
+		
+		
+	</div>
+</div>
+
+  </div>
+  </div>
+  <div id="content" class="row">
+    <div id="content-left" class="col-md-4">
+      
+
+	
+
+	
+	<div class="widget-wrap">
+		<h3 class="widget-title fa fa-tags">标签</h3>
+		<div class="widget tags">
+		<a class="tag-span-link" href="/tags/Linux/" rel="tag">Linux<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/Markdown/" rel="tag">Markdown<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/SpringMVC/" rel="tag">SpringMVC<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/java/" rel="tag">java<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/python/" rel="tag">python<span class="tag-span-count">8</span></a> <a class="tag-span-link" href="/tags/%E5%88%B7%E9%A2%98%E4%B9%8B%E6%97%85/" rel="tag">刷题之旅<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/" rel="tag">我的项目<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法<span class="tag-span-count">6</span></a> <a class="tag-span-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" rel="tag">数据结构和算法<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E7%AC%94%E8%AF%95/" rel="tag">笔试<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" rel="tag">计算机基础<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络<span class="tag-span-count">2</span></a> <a class="tag-span-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式<span class="tag-span-count">1</span></a> <a class="tag-span-link" href="/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" rel="tag">踩坑记录<span class="tag-span-count">2</span></a>
+		</div>
+	</div>
+
+
+	
+	<div class="widget-wrap">
+		<h3 class="widget-title fa fa-archive">归档</h3>
+		<div class="widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">33</span></li></ul>
+		</div>
+	</div>
+
+
+
+    </div>
+    <div id="content-right" class="col-md-8">
+    
+<article id="post">
+	<div class="post-title">
+  <h1>CRC算法</h1>
+  	</div>
+  <div class="page-meta">
+  	<span class="fa-wrap">
+  		<i class="fa fa-clock-o"></i>
+  		<span class="date-meta">2021-08-29</span>
+  	</span>
+  	<span class="fa-wrap">
+  		
+  		<i class="fa fa-tags"></i>
+  		<span class="tags-meta">数据结构与算法</span>
+  		
+  	</span>
+  	<span class="fa-wrap">
+  		
+  	</span>
+  </div>
+  <div class="post-content">
+  <h2 id="循环冗余校验（CRC-cyclic-redundancy-check）算法"><a href="#循环冗余校验（CRC-cyclic-redundancy-check）算法" class="headerlink" title="循环冗余校验（CRC cyclic redundancy check）算法"></a>循环冗余校验（CRC <strong>cyclic redundancy check</strong>）算法</h2><h3 id="什么是CRC算法？"><a href="#什么是CRC算法？" class="headerlink" title="什么是CRC算法？"></a>什么是CRC算法？</h3><p>CRC 算法的基本思想是将传输的数据当做一个位数很长的数。将这个数除以另一个数。得到的余数作为校验数据附加到原数据后面。循环冗余检查（CRC）是一种数据传输检错功能，对数据进行多项式计算，并将得到的结果附在帧的后面，接收设备也执行类似的算法，以保证数据传输的正确性和完整性。</p>
+<p>一个完整的数据帧通常由以下部分构成：</p>
+<p><img src="https://pic1.zhimg.com/v2-fd234222bf00f00d841f2078b4a3cd18_r.jpg" alt="preview"></p>
+<h3 id="CRC-算法原理"><a href="#CRC-算法原理" class="headerlink" title="CRC 算法原理"></a><strong>CRC 算法原理</strong></h3><p>在对信息的处理过程中，我们可以将要被处理的<strong>数据块M</strong>看成一个n阶的二进制多项式，其形式如下：</p>
+<p><img src="https://img2018.cnblogs.com/blog/1533900/201901/1533900-20190113074726300-198107255.png" alt="img"></p>
+<h4 id="以下为各种常用的多项表达式："><a href="#以下为各种常用的多项表达式：" class="headerlink" title="以下为各种常用的多项表达式："></a>以下为各种常用的多项表达式：</h4><p><img src="https://img2018.cnblogs.com/blog/1533900/201901/1533900-20190113075102054-172410182.png" alt="img"></p>
+<h3 id="CRC参数模型"><a href="#CRC参数模型" class="headerlink" title="CRC参数模型"></a>CRC参数模型</h3><p>不知道你是否遇到过这种情况，同样的CRC多项式，调用不同的CRC计算函数，得到的结果却不一样，而且和手算的结果也不一样，这就涉及到CRC的参数模型了。计算一个正确的CRC值，需要知道CRC的参数模型。</p>
+<p>一个完整的CRC参数模型应该包含以下信息：WIDTH，POLY，INIT，REFIN，REFOUT，XOROUT。</p>
+<ul>
+<li>NAME：参数模型名称。</li>
+<li>WIDTH：宽度，即生成的CRC数据位宽，如CRC-8，生成的CRC为8位</li>
+<li>POLY：十六进制多项式，省略最高位1，如 x8 + x2 + x + 1，二进制为1 0000 0111，省略最高位1，转换为十六进制为0x07。</li>
+<li>INIT：CRC初始值，和WIDTH位宽一致。</li>
+<li>REFIN：true或false，在进行计算之前，原始数据是否翻转，如原始数据：0x34 = 0011 0100，如果REFIN为true，进行翻转之后为0010 1100 = 0x2c</li>
+<li>REFOUT：true或false，运算完成之后，得到的CRC值是否进行翻转，如计算得到的CRC值：0x97 = 1001 0111，如果REFOUT为true，进行翻转之后为11101001 = 0xE9。</li>
+<li>XOROUT：计算结果与此参数进行异或运算后得到最终的CRC值，和WIDTH位宽一致。</li>
+</ul>
+<p>通常如果只给了一个多项式，其他的没有说明则：INIT=0x00，REFIN=false，REFOUT=false，XOROUT=0x00。</p>
+<h4 id="原始数据：0x34，使用CRC-8-MAXIN参数模型，求CRC值？"><a href="#原始数据：0x34，使用CRC-8-MAXIN参数模型，求CRC值？" class="headerlink" title="原始数据：0x34，使用CRC-8/MAXIN参数模型，求CRC值？"></a><strong>原始数据：0x34，使用CRC-8/MAXIN参数模型，求CRC值？</strong></h4><p>答：根据CRC参数模型表，得到CRC-8/MAXIN的参数如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">POLY = <span class="number">0x31</span>（十六进制， <span class="number">16</span>*<span class="number">3</span>+<span class="number">1</span> = <span class="number">49</span>） = <span class="number">0011</span> <span class="number">0001</span>(最高位<span class="number">1</span>已经省略)</span><br><span class="line">INIT = <span class="number">0x00</span></span><br><span class="line">XOROUT = <span class="number">0x00</span></span><br><span class="line">REFIN = TRUE</span><br><span class="line">REFOUT = TRUE</span><br></pre></td></tr></table></figure>
+
+<p>有了上面的参数，这样计算条件才算完整，下面来实际计算：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">0.原始数据 = 0x34 = 0011 0100，多项式 = 0x31 = 1 0011 0001</span><br><span class="line">1.INIT = 00，原始数据高8位和初始值进行异或运算保持不变。</span><br><span class="line">2.REFIN为TRUE，需要先对原始数据进行翻转：0011 0100 &gt; 0010 1100</span><br><span class="line">3.原始数据左移8位，即后面补8个0：0010 1100 0000 0000</span><br><span class="line">4.把处理之后的数据和多项式进行模2除法，求得余数：</span><br><span class="line">原始数据：0010 1100 0000 0000 = 10 1100 0000 0000</span><br><span class="line">多项式：1 0011 0001</span><br><span class="line">模2除法取余数低8位：1111 1011</span><br><span class="line">5.与XOROUT进行异或，1111 1011 xor 0000 0000 = 1111 1011 </span><br><span class="line">6.因为REFOUT为TRUE，对结果进行翻转得到最终的CRC-8值：1101 1111 = 0xDF</span><br><span class="line">7.数据+CRC：0011 0100 1101 1111 = 34DF，相当于原始数据左移8位+余数。</span><br></pre></td></tr></table></figure>
+
+<h4 id="CRC校验码计算示例："><a href="#CRC校验码计算示例：" class="headerlink" title="CRC校验码计算示例："></a>CRC校验码计算示例：</h4><p>现假设选择的 CRC生成多项式为 G（ X） = X4 + X3 + 1，要求出二进制序列 10110011的 CRC校验码。下面是具体的计算过程 ：</p>
+<img src="https://img-blog.csdn.net/20170622115737528?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRF9sZW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"  />
+
+<p>1、将多项式转化为二进制序列，由 G（ X） = X4 + X3 + 1<strong>可知二进制一种有五位，第4位、第三位和第零位分别为1，则序列为11001；</strong></p>
+<p>2、<strong>多项式的位数位5，则在数据帧的后面加上5-1位0</strong>，数据帧变为 101100110000，然后使用模2除法除以除数 11001，得到余数；</p>
+<p>3、将计算出来的CRC校验码添加在原始帧的后面，真正的数据帧为<strong>101100110100</strong>，再把这个数据帧发送到接收端；</p>
+<p>4、接收端收到数据帧后，用上面选定的除数，用模2除法除去，验证余数是否为0，如果为0，则说明数据帧没有出错。</p>
+<h2 id="补充知识："><a href="#补充知识：" class="headerlink" title="补充知识："></a>补充知识：</h2><h3 id="模二运算"><a href="#模二运算" class="headerlink" title="模二运算"></a>模二运算</h3><h4 id="模2加法运算（异或操作）：1-1-0，0-1-1，0-0-0，无进位，也无借位；"><a href="#模2加法运算（异或操作）：1-1-0，0-1-1，0-0-0，无进位，也无借位；" class="headerlink" title="模2加法运算（异或操作）：1+1=0，0+1=1，0+0=0，无进位，也无借位；"></a>模2加法运算（异或操作）：1+1=0，0+1=1，0+0=0，无进位，也无借位；</h4><h4 id="模2减法运算：1-1-0，0-1-1，1-0-1，0-0-0，也无进位，无借位。"><a href="#模2减法运算：1-1-0，0-1-1，1-0-1，0-0-0，也无进位，无借位。" class="headerlink" title="模2减法运算：1-1=0，0-1=1，1-0=1，0-0=0，也无进位，无借位。"></a>模2减法运算：1-1=0，0-1=1，1-0=1，0-0=0，也无进位，无借位。</h4><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/256487370">参考一：CRC校验原理及实现</a></p>
+
+	</div>
+</article>
+
+
+
+    </div>
+  </div>
+  <div class="row">
+<div id="bottom" class="col-md-12"> 
+  <div class="bottom-nav">
+	
+	
+	<a href="https://github.com/lizehongss" class="fa fa-github fa-2x" target="_blank" title="Follow me" ></a>
+	
+	
+</div>
+<div class="bottom-info">
+	&copy; 2021 Wlaon Cycler<br>
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	theme <a href="https://github.com/lizehongss/hexo-theme-zhl" target="_blank">zhl</a>
+</div>
+</div>
+</div>
+</div>
+<div id="tool">
+  <ul>
+    <li class="fa fa-angle-up top" id="top"></li>
+  </ul>
+</div>
+  <div class="bg_content">
+    <canvas id="canvas"></canvas>
+  </div>
+  
+  <!-- scripts list from theme config.yml -->
+  
+    <script src="/js/zhl.js"></script>
+  
+    <script src="/js/bj.js"></script>
+  
+
+<!-- jQ cdn  -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<!-- bootstrap js cdn-->
+<!-- <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+
+</body>
+</html>
