@@ -355,66 +355,157 @@
 <td align="center">开启iptables服务的开机自启动</td>
 </tr>
 </tbody></table>
-<p>八、网络管理<br>8.1 主机名配置<br>[root@node1 ~]# vi /etc/sysconfig/network<br>NETWORKING=yes<br>HOSTNAME=node1<br>8.2 IP 地址配置<br>[root@node1 ~]# vi /etc/sysconfig/network-scripts/ifcfg-eth0<br>8.3 域名映射<br>/etc/hosts文件用于在通过主机名进行访问时做ip地址解析之用。所以，你想访问一个什么样的主机名，就需要把这个主机名和它对应的ip地址。</p>
-<p>[root@node1 ~]# vi /etc/hosts</p>
-<h4 id="在最后加上"><a href="#在最后加上" class="headerlink" title="在最后加上"></a>在最后加上</h4><p>192.168.52.201  node1<br>192.168.52.202  node2<br>192.168.52.203  node3<br>九、定时任务指令crontab 配置<br>crontab是Unix和Linux用于设置定时任务的指令。通过crontab命令，可以在固定间隔时间,执行指定的系统指令或shell脚本。时间间隔的单位可以是分钟、小时、日、月、周及以上的任意组合。</p>
-<p>crontab安装：</p>
-<p>yum install crontabs<br>服务操作说明：</p>
-<p>service crond start   ## 启动服务<br>service crond stop    ## 关闭服务<br>service crond restart ## 重启服务<br>9.1 命令格式<br>crontab [-u user] file</p>
-<p>crontab [-u user] [ -e | -l | -r ]</p>
-<p>参数说明：</p>
-<p>-u user：用来设定某个用户的crontab服务  </p>
-<p>file：file是命令文件的名字,表示将file做为crontab的任务列表文件</p>
-<p>并载入crontab。</p>
-<p>-e：编辑某个用户的crontab文件内容。如果不指定用户，则表示编辑当前</p>
-<p>用户的crontab文件。</p>
-<p>-l：显示某个用户的crontab文件内容。如果不指定用户，则表示显示当前</p>
-<p>用户的crontab文件内容。</p>
-<p>-r：删除定时任务配置，从/var/spool/cron目录中删除某个用户的crontab</p>
-<p>文件，如果不指定用户，则默认删除当前用户的crontab文件。</p>
-<p>命令示例：</p>
-<p>crontab file [-u user] ## 用指定的文件替代目前的crontab<br>crontab -l [-u user]  ## 列出用户目前的crontab<br>crontab -e [-u user]  ## 编辑用户目前的crontab<br>9.2 配置说明、实例<br>命令：*   *    *   *   *   command  </p>
-<p>解释：分  时  日  月  周  命令</p>
+<h3 id="七、网络管理及相关命令"><a href="#七、网络管理及相关命令" class="headerlink" title="七、网络管理及相关命令"></a>七、网络管理及相关命令</h3><table>
+<thead>
+<tr>
+<th align="center">命令名称</th>
+<th align="center">命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">主机名配置</td>
+<td align="center">[root@node1 ~]# vi /etc/sysconfig/network<br/>NETWORKING=yes<br/>HOSTNAME=node</td>
+</tr>
+<tr>
+<td align="center">IP地址配置</td>
+<td align="center">[root@node1 ~]# vi /etc/sysconfig/network-scripts/ifcfg-eth0</td>
+</tr>
+<tr>
+<td align="center">域名映射</td>
+<td align="center">[root@node1 ~]# vi /etc/hosts 192.168.52.201  node1</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">查看网卡信息</td>
+<td align="center">ifconfig 或 ifconfig | more</td>
+</tr>
+<tr>
+<td align="center">查看与某台机器的连接情况</td>
+<td align="center">ping ip</td>
+</tr>
+<tr>
+<td align="center">查看当前系统端口</td>
+<td align="center">netstat -an</td>
+</tr>
+<tr>
+<td align="center">搜索指定端口</td>
+<td align="center">netstat -an | grep 8080</td>
+</tr>
+<tr>
+<td align="center">配置网络</td>
+<td align="center">setup</td>
+</tr>
+<tr>
+<td align="center">重启网络</td>
+<td align="center">service network restart</td>
+</tr>
+<tr>
+<td align="center">切换用户</td>
+<td align="center">su - 用户名</td>
+</tr>
+<tr>
+<td align="center">关闭防火墙</td>
+<td align="center">chkconfig iptables off 或者 <br/> iptables -L;<br/> iptables -F;<br/> service iptables stop</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><strong>域名映射：/etc/hosts文件用于在通过主机名进行访问时做ip地址解析之用。所以，你想访问一个什么样的主机名，就需要把这个主机名和它对应的ip地址。</strong></p>
+<p>即在  [root@node1 ~]# vi /etc/hosts 后加上</p>
+<p>192.168.52.201  node1<br>192.168.52.202  node2<br>192.168.52.203  node3 </p>
+<h3 id="八、定时任务指令crontab相关配置"><a href="#八、定时任务指令crontab相关配置" class="headerlink" title="八、定时任务指令crontab相关配置"></a>八、定时任务指令crontab相关配置</h3><p><strong>crontab是Unix和Linux用于设置定时任务的指令，通过crontab命令，可以在固定间隔时间,执行指定的系统指令或shell脚本。时间间隔的单位可以是分钟、小时、日、月、周及以上的任意组合。</strong></p>
+<h4 id="crontab安装："><a href="#crontab安装：" class="headerlink" title="crontab安装："></a>crontab安装：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install crontabs</span><br></pre></td></tr></table></figure>
+
+<h4 id="服务操作说明："><a href="#服务操作说明：" class="headerlink" title="服务操作说明："></a>服务操作说明：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service crond start ## 启动服务</span><br><span class="line">service crond stop  ## 关闭服务</span><br><span class="line">service crond restart ## 重启服务</span><br></pre></td></tr></table></figure>
+
+<h4 id="命令格式："><a href="#命令格式：" class="headerlink" title="命令格式："></a>命令格式：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">crontab [-u user] file</span><br><span class="line">crontab [-u user][-e | -l | -r]</span><br></pre></td></tr></table></figure>
+
+<h5 id="参数说明："><a href="#参数说明：" class="headerlink" title="参数说明："></a>参数说明：</h5><table>
+<thead>
+<tr>
+<th align="center">参数名称</th>
+<th align="center">参数说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-u user</td>
+<td align="center">用来设定某个用户的crontab服务</td>
+</tr>
+<tr>
+<td align="center">file</td>
+<td align="center">file是命令文件的名字,表示将file做为crontab的任务列表文件并载入crontab</td>
+</tr>
+<tr>
+<td align="center">-l</td>
+<td align="center">显示某个用户的crontab文件内容。如果不指定用户，则表示显示当前用户的crontab文件内容</td>
+</tr>
+<tr>
+<td align="center">-r</td>
+<td align="center">删除定时任务配置，从/var/spool/cron目录中删除某个用户的cront文件，如果不指定用户，则默认删除当前用户的crontab文件</td>
+</tr>
+<tr>
+<td align="center">crontab file [-u user]</td>
+<td align="center">用指定的文件替代目前的crontab</td>
+</tr>
+<tr>
+<td align="center">crontab -l [-u user]</td>
+<td align="center">列出用户目前的crontab</td>
+</tr>
+<tr>
+<td align="center">crontab -e [-u user]</td>
+<td align="center">编辑用户目前的crontab</td>
+</tr>
+</tbody></table>
+<h4 id="配置实例说明："><a href="#配置实例说明：" class="headerlink" title="配置实例说明："></a>配置实例说明：</h4><p>*<em>命令：</em>   *    *   *   *   command  ** 对应   <strong>分  时  日  月  周  命令</strong></p>
+<p><strong>其中：</strong></p>
 <p>第1列表示分钟1～59 每分钟用*或者 */1表示    </p>
 <p>第2列表示小时0～23（0表示0点）</p>
 <p>第3列表示日期1～31  </p>
 <p>第4列表示月份1～12  </p>
 <p>第5列标识号星期0～6（0表示星期天）  </p>
 <p>第6列要运行的命令</p>
-<p>配置实例：</p>
-<p>先打开定时任务所在的文件：<br>crontab -e</p>
-<p>每分钟执行一次date命令<br>*/1 * * * * date &gt;&gt; /root/date.txt</p>
-<p>每晚的21:30重启apache。<br>30 21 * * * service httpd restart</p>
-<p>每月1、10、22日的4 : 45重启apache。<br>45 4 1,10,22 * * service httpd restart</p>
-<p>每周六、周日的1 : 10重启apache。<br>10 1 * * 6,0 service httpd restart</p>
-<p>每天18 : 00至23 : 00之间每隔30分钟重启apache。<br>0,30   18-23    *   *   *   service httpd restart<br>晚上11点到早上7点之间，每隔一小时重启apache</p>
-<ul>
-<li> 23-7/1    *   *   *   service httpd restart<br>十、其他命令</li>
-</ul>
-<p>10.1 查看当前目录：pwd<br>命令：pwd     查看当前目录路径</p>
-<p>10.2 查看进程：ps -ef<br>命令：ps -ef    查看所有正在运行的进程</p>
-<p>10.3 结束进程：kill<br>命令：kill pid 或者 kill -9 pid(强制杀死进程)           pid:进程号</p>
-<p>10.4 网络通信命令：<br>ifconfig：查看网卡信息</p>
-<p>命令：ifconfig 或 ifconfig | more</p>
-<p>ping：查看与某台机器的连接情况</p>
-<p>命令：ping ip</p>
-<p>netstat -an：查看当前系统端口</p>
-<p>命令：netstat -an</p>
-<p>搜索指定端口<br>命令：netstat -an | grep 8080</p>
-<p>10.5 配置网络<br>命令：setup</p>
-<p>10.6 重启网络<br>命令：service network restart</p>
-<p>10.7 切换用户<br>命令：su - 用户名</p>
-<p>10.8 关闭防火墙<br>命令：chkconfig iptables off</p>
-<p>或者：</p>
-<p> iptables -L;<br> iptables -F;<br> service iptables stop<br>10.9 修改文件权限<br>命令：chmod 777</p>
-<p>10.10 清屏<br>命令：ctrl + l</p>
-<p>10.11 vi模式下快捷键<br>esc后:</p>
-<p>保存并退出快捷键：shift+z+z</p>
-<p>光标跳到最后一行快捷键：shift+g</p>
-<p>删除一行：dd</p>
-<p>复制一行内容：y+y</p>
-<p>粘贴复制的内容：p</p>
-<h3 id="REFERENCES"><a href="#REFERENCES" class="headerlink" title="REFERENCES"></a>REFERENCES</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_23329167/article/details/83856430?utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-5.no_search_link&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-5.no_search_link">参考一：Linux常用命令</a></p>
+<p><strong>配置实例：</strong></p>
+<p>首先打开定时任务所在的文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">配置命令</th>
+<th align="center">配置详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">*/1 * * * * date &gt;&gt; /root/date.txt</td>
+<td align="center">每分钟执行一次date命令</td>
+</tr>
+<tr>
+<td align="center">30 21 * * * service httpd restart</td>
+<td align="center">每晚的21:30重启apache</td>
+</tr>
+<tr>
+<td align="center">45 4 1,10,22 * * service httpd restart</td>
+<td align="center">每月1、10、22日的4 : 45重启apache</td>
+</tr>
+<tr>
+<td align="center">10 1 * * 6,0 service httpd restart</td>
+<td align="center">每周六、周日的1 : 10重启apach</td>
+</tr>
+<tr>
+<td align="center">0,30   18-23    *   *   *   service httpd restart</td>
+<td align="center">每天18 : 00至23 : 00之间每隔30分钟重启apache</td>
+</tr>
+<tr>
+<td align="center">23-7/1    *   *   *   service httpd restart</td>
+<td align="center">晚上11点到早上7点之间，每隔一小时重启apache</td>
+</tr>
+</tbody></table>
+<h3 id="九、其它命令"><a href="#九、其它命令" class="headerlink" title="九、其它命令"></a>九、其它命令</h3><h3 id="REFERENCES"><a href="#REFERENCES" class="headerlink" title="REFERENCES"></a>REFERENCES</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_23329167/article/details/83856430?utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-5.no_search_link&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-5.no_search_link">参考一：Linux常用命令</a></p>
 
 	</div>
 </article>
