@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
-  <title>Markdown语法 [ 晰瓜 ]</title>
+  <title>Hexo常用命令 [ 晰瓜 ]</title>
   <!-- bootstrapcss文件 -->
  <!--  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 <!--   
@@ -83,17 +83,17 @@
     
 <article id="post">
 	<div class="post-title">
-  <h1>Markdown语法</h1>
+  <h1>Hexo常用命令</h1>
   	</div>
   <div class="page-meta">
   	<span class="fa-wrap">
   		<i class="fa fa-clock-o"></i>
-  		<span class="date-meta">2021-08-16</span>
+  		<span class="date-meta">2021-10-12</span>
   	</span>
   	<span class="fa-wrap">
   		
   		<i class="fa fa-tags"></i>
-  		<span class="tags-meta">Markdown</span>
+  		<span class="tags-meta">踩坑记录</span>
   		
   	</span>
   	<span class="fa-wrap">
@@ -101,7 +101,126 @@
   	</span>
   </div>
   <div class="post-content">
-  <h1 id="Markdown-常用语法"><a href="#Markdown-常用语法" class="headerlink" title="Markdown 常用语法"></a>Markdown 常用语法</h1>
+  <h2 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h2><h3 id="简写指令："><a href="#简写指令：" class="headerlink" title="简写指令："></a>简写指令：</h3><table>
+<thead>
+<tr>
+<th align="center">简写指令</th>
+<th align="center">全称指令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">hexo n “我的博文”</td>
+<td align="center">hexo new（post） “我的博文”</td>
+</tr>
+<tr>
+<td align="center">hexo p</td>
+<td align="center">hexo publish</td>
+</tr>
+<tr>
+<td align="center">hexo g</td>
+<td align="center">hexo generate</td>
+</tr>
+<tr>
+<td align="center">hexo s</td>
+<td align="center">hexo server</td>
+</tr>
+<tr>
+<td align="center">hexo d</td>
+<td align="center">hexo deploy</td>
+</tr>
+<tr>
+<td align="center">hexo deploy -g</td>
+<td align="center">hexo deploy –generate</td>
+</tr>
+<tr>
+<td align="center">hexo generate -d</td>
+<td align="center">hexo generate –deploy</td>
+</tr>
+<tr>
+<td align="center">hexo clean</td>
+<td align="center">hexo clean</td>
+</tr>
+<tr>
+<td align="center">git –version</td>
+<td align="center">git –version</td>
+</tr>
+</tbody></table>
+<p>**注：git –version , hexo clean 没有简写 **</p>
+<h3 id="指令说明："><a href="#指令说明：" class="headerlink" title="指令说明："></a>指令说明：</h3><table>
+<thead>
+<tr>
+<th align="center">指令</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">hexo -v</td>
+<td align="center">查看hexo版本号</td>
+</tr>
+<tr>
+<td align="center">git –version</td>
+<td align="center">查看git版本号</td>
+</tr>
+<tr>
+<td align="center">npm -v</td>
+<td align="center">查看npm版本号</td>
+</tr>
+<tr>
+<td align="center">node -v</td>
+<td align="center">查看node.js版本号</td>
+</tr>
+<tr>
+<td align="center">nmp install hexo -g</td>
+<td align="center">安装</td>
+</tr>
+<tr>
+<td align="center">npm update hexo -g</td>
+<td align="center">升级</td>
+</tr>
+<tr>
+<td align="center">hexo init “文件夹名X”</td>
+<td align="center">初始化X文件夹名称</td>
+</tr>
+<tr>
+<td align="center">hexo d</td>
+<td align="center">将本地数据部署到远端服务器</td>
+</tr>
+<tr>
+<td align="center">hexo g</td>
+<td align="center">生成静态网页</td>
+</tr>
+<tr>
+<td align="center">hexo clean</td>
+<td align="center">清除缓存</td>
+</tr>
+<tr>
+<td align="center">hexo server</td>
+<td align="center">Hexo 会监视文件变动并自动更新</td>
+</tr>
+<tr>
+<td align="center">hexo server -s</td>
+<td align="center">以静态模式启动</td>
+</tr>
+<tr>
+<td align="center">hexo server -p 8080</td>
+<td align="center">更改访问端口（默认4000）</td>
+</tr>
+<tr>
+<td align="center">hexo server -i IP地址</td>
+<td align="center">自定义 IP</td>
+</tr>
+</tbody></table>
+<p><strong>注：执行<code>$ hexo g</code>后会在站点根目录下生成public文件夹, hexo会将”/blog/source/“   下面的.md后缀的文件编译为.html后缀的文件,存放在”/blog/public/ “   路径下)</strong></p>
+<ul>
+<li><p><code>hexo publish [layout] &lt;title&gt;</code>   #通过 <code>publish</code> 命令将草稿移动到 <code>source/_posts</code> 文件夹,如:<code>$ hexo publish [layout] &lt;title&gt;</code>,草稿默认是不会显示在页面中的，可在执行时加上 <code>--draft</code> 参数，或是把 <code>render_drafts</code> 参数设为 <code>true</code>来预览草稿。</p>
+</li>
+<li><p><code>hexo new aaa &quot;bbb&quot;</code>  # 新建一篇文章,文章名称和标题分别为bbb.md 和 bbb.   文章采用aaa布局,  此时会在站点根目录下的—-&gt;source—–&gt;_post文件夹下生成bbb.md文件,  bbb.md文件的顶部(—–分割线上方区域,也称作Front matter区),生成</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">layout : aaa`</span><br><span class="line"> `title:`</span><br><span class="line"> `date:</span><br></pre></td></tr></table></figure>
+
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/7b8faf77d1af">Hexo常用命令</a></p>
+
 	</div>
 </article>
 
